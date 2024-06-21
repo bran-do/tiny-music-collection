@@ -10,6 +10,7 @@ function SearchPage() {
         <button onClick={ () => navigate(-1) }>{ '<' }</button>
         <div className="search-bar">
           <form>
+            <button>S</button>
             <input type="text" placeholder="What else?" />
           </form>
         </div>
@@ -17,7 +18,7 @@ function SearchPage() {
 
       <div className="search-results-text">
         <p>Album results for</p>
-        <h3>'neil young'</h3>
+        <h3>'botando lenha na fogueira errada'</h3>
       </div>
     </div>
   )
