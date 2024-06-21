@@ -1,0 +1,17 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+  width: 18rem;
+  color: #e28fdb;
+  background-color: black;
+}
+
+.top-bar .hour {
+  padding-left: 10px;
+}
+
+.top-bar .day {
+  padding-right: 10px;
+}

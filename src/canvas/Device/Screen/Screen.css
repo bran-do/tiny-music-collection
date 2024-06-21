@@ -1,8 +1,10 @@
 .screen {
   display: flex;
-  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
   height: 32rem;
   width: 18rem;
   border: 3px solid black;
-  border-radius: 10%;
+  background-color: #e28fdb;
+  border-radius: 5%;
 }

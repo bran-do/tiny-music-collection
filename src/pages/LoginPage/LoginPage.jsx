@@ -6,7 +6,7 @@ function LoginPage() {
         <h3>What's your name?</h3>
         <div className='input-and-btn'>
           <input placeholder="Name"></input>
-          <button>A</button>
+          <button>{'>'}</button>
         </div>
     </div>
   )
