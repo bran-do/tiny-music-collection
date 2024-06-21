@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import BackBtn from '../../components/BackBtn/BackBtn';
+
 import './ProfilePage.css'
 
 function ProfilePage() {
@@ -7,7 +9,7 @@ function ProfilePage() {
   return (
     <div className="profile-container">
       <div className="profile-header">
-        <button onClick={ () => navigate(-1) }>{ '<' }</button>
+        <BackBtn />
         <header>Profile</header>
       </div>
     </div>

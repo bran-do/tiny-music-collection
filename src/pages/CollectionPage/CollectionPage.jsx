@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import BackBtn from '../../components/BackBtn/BackBtn';
+
 import './CollectionPage.css'
 
 function CollectionPage() {
@@ -7,7 +9,7 @@ function CollectionPage() {
   return (
     <div className="collection-container">
       <div className="collection-header">
-        <button onClick={ () => navigate(-1) }>{ '<' }</button>
+        <BackBtn />
         <header>Collection</header>
       </div>
     </div>
