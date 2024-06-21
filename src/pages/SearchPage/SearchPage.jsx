@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+
 import './SearchPage.css'
+import searchIcon from '../../assets/icons/search.svg'
 
 function SearchPage() {
   const navigate = useNavigate();
@@ -10,7 +12,9 @@ function SearchPage() {
         <button onClick={ () => navigate(-1) }>{ '<' }</button>
         <div className="search-bar">
           <form>
-            <button>S</button>
+            <button>
+              <img src={ searchIcon } alt="Search" width="14" />
+            </button>
             <input type="text" placeholder="What else?" />
           </form>
         </div>
