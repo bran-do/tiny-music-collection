@@ -1,6 +1,8 @@
 .screen {
-  height: 40rem;
-  width: 28rem;
+  display: flex;
+  justify-content: center;
+  height: 32rem;
+  width: 18rem;
   border: 3px solid black;
   border-radius: 10%;
 }
