@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
+  padding: 0 10px 1rem;
 }
 
 .greetings-and-search-bar {
@@ -15,13 +16,17 @@
 .greetings {
   display: flex;
   text-align: start;
-  padding: 0 10px;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.greetings > h3 {
+  font-size: 35px;
 }
 
 .buttons-menu {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 10px;
 }
 
 form > input::placeholder {

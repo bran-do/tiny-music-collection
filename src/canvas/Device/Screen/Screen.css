@@ -3,8 +3,9 @@
   overflow: hidden;
   flex-direction: column;
   height: 32rem;
-  width: 18rem;
+  width: 19rem;
   border: 3px solid black;
   background-color: #e28fdb;
   border-radius: 5%;
+  justify-content: center;
 }

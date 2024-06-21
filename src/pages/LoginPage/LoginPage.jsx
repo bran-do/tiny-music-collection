@@ -11,7 +11,7 @@ function LoginPage() {
 
   return (
     <div className="login-container">
-        <h3>What's your name?</h3>
+        <h3>What&apos;s your name?</h3>
         <form onSubmit={ handleSubmit } className='input-and-btn'>
           <input placeholder="Name" type="text" />
           <button>{'>'}</button>

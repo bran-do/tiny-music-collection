@@ -24,7 +24,7 @@ input {
 
 input::placeholder {
   font-family: pixel-op;
-  font-size: larger;
+  font-size: 30px;
   color: black;
 }
 
