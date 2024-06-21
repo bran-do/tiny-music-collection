@@ -3,3 +3,31 @@
   margin: 0 auto;
   text-align: center;
 }
+
+form:has(> input) {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin: 0 10px;
+}
+
+input {
+  flex-grow: 1;
+  padding-left: 5px;
+  font-family: pixel-op-bold;
+  font-size: larger;
+  color: black;
+  height: 25px;
+  border: none;
+  background: none;
+}
+
+input::placeholder {
+  font-family: pixel-op;
+  font-size: larger;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}

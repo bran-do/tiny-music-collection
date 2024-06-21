@@ -1,0 +1,29 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.greetings-and-search-bar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.greetings {
+  display: flex;
+  text-align: start;
+  padding: 0 10px;
+}
+
+.buttons-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+form > input::placeholder {
+  font-size: 13.5px;
+}
