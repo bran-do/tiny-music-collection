@@ -1,6 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css'
 
+import searchIcon from '../../assets/icons/search.svg'
+import profileIcon from '../../assets/icons/user.svg'
+import collectionIcon from '../../assets/icons/disc.svg'
+
 function HomePage() {
   const navigate = useNavigate();
 
@@ -15,15 +19,21 @@ function HomePage() {
 
         <div className="search-bar">
           <form onSubmit={ () => handleNavigation('search') }>
-            <button>S</button>
+            <button>
+              <img src={ searchIcon } alt="Search" width="14" />
+            </button>
             <input type="text" placeholder='Add some music to your collection' />
           </form>
         </div>
       </div>
 
       <nav className="buttons-menu">
-        <button onClick={ () => handleNavigation('collection') }>C</button>
-        <button onClick={ () => handleNavigation('profile') }>P</button>
+        <button onClick={ () => handleNavigation('collection') }>
+          <img src={ collectionIcon } alt="Collection" />
+        </button>
+        <button onClick={ () => handleNavigation('profile') }>
+          <img src={ profileIcon } alt="Profile" />
+        </button>
       </nav>
     </div>
   )
