@@ -1,19 +1,19 @@
 import { useState, useContext } from 'react';
-import AppContext from '../../context/AppContext';
+import SearchContext from '../../context/SearchContext';
 
 import './SearchSearchBar.css';
 
 import searchIcon from '../../assets/icons/search.svg'
 
 function SearchSearchBar() {
-  const appContext = useContext(AppContext);
+  const searchContext = useContext(SearchContext);
 
   const [term, setTerm] = useState('');
 
   const handleChange = (event) => { setTerm(event.target.value) };
   const handleSubmit = (event) => {
     event.preventDefault();
-    appContext.setSearchTerm(term)
+    searchContext.setSearchTerm(term)
   };
 
   return (

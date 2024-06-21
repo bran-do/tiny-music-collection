@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import AppContext from '../../context/AppContext';
+import SearchContext from '../../context/SearchContext';
 
 import './SearchPage.css'
 
@@ -7,7 +7,7 @@ import BackBtn from '../../components/BackBtn/BackBtn';
 import SearchSearchBar from '../../components/SearchSearchBar/SearchSearchBar';
 
 function SearchPage() {
-  const appContext = useContext(AppContext);
+  const searchContext = useContext(SearchContext);
 
   return (
     <div className="search-container">
@@ -18,7 +18,7 @@ function SearchPage() {
 
       <div className="search-results-text">
         <p>Album results for</p>
-        <h3>&apos;{ appContext.searchTerm }&apos;</h3>
+        <h3>&apos;{ searchContext.searchTerm }&apos;</h3>
       </div>
     </div>
   )

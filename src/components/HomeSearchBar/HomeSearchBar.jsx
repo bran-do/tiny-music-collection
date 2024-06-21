@@ -1,20 +1,20 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppContext from '../../context/AppContext';
+import SearchContext from '../../context/SearchContext';
 
 import './HomeSearchBar.css';
 
 import searchIcon from '../../assets/icons/search.svg'
 
 function HomeSearchBar() {
-  const appContext = useContext(AppContext);
+  const searchContext = useContext(SearchContext);
   const navigate = useNavigate();
 
   const [term, setTerm] = useState('');
 
   const handleChange = (event) => { setTerm(event.target.value) };
   const handleSubmit = () => {
-    appContext.setSearchTerm(term);
+    searchContext.setSearchTerm(term);
     navigate('/search');
   }
 
