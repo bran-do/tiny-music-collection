@@ -11,7 +11,10 @@ function SearchSearchBar() {
   const [term, setTerm] = useState('');
 
   const handleChange = (event) => { setTerm(event.target.value) };
-  const handleSubmit = () => { appContext.setSearchTerm(term) };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    appContext.setSearchTerm(term)
+  };
 
   return (
     <div className="search-search-bar">

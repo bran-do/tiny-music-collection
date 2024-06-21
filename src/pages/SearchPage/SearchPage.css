@@ -1,3 +1,8 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .search-header {
   display: flex;
   place-items: center;
@@ -23,5 +28,6 @@
 .search-results-text > h3 {
   font-size: 33px;
   margin-top: auto;
-  line-height: 0.7;
+  line-height: 0.8;
+  word-wrap: break-word;
 }
