@@ -15,8 +15,8 @@ function HomePage() {
 
         <div className="search-bar">
           <form>
-            <input type="text" placeholder='Add some music to your collection' />
             <button>S</button>
+            <input type="text" placeholder='Add some music to your collection' />
           </form>
         </div>
       </div>
