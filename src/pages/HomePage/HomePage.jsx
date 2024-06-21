@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import HomeSearchBar from '../../components/HomeSearchBar/HomeSearchBar';
+
 import './HomePage.css'
 
 import profileIcon from '../../assets/icons/user.svg'
@@ -16,7 +17,7 @@ function HomePage() {
           <h3>Hello,<br />user.</h3>
         </div>
 
-        <SearchBar />
+        <HomeSearchBar />
       </div>
 
       <nav className="buttons-menu">

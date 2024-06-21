@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import searchIcon from '../../assets/icons/search.svg'
 
-import './SearchBar.css';
+import './HomeSearchBar.css';
 import { useNavigate } from 'react-router-dom';
 
-function SearchBar() {
+function HomeSearchBar() {
   const navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -31,4 +31,4 @@ function SearchBar() {
 
 }
 
-export default SearchBar;
+export default HomeSearchBar;
