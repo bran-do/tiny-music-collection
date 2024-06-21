@@ -1,14 +1,14 @@
-.collection-header {
+.profile-header {
   display: flex;
   align-items: center;
 }
 
-.collection-header > header {
+.profile-header > header {
   display: flex;
   flex-grow: 1;
   justify-content: center;
 }
 
-.collection-header > button {
+.profile-header > button {
   position: absolute;
 }

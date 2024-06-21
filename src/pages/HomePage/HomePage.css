@@ -11,17 +11,17 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .greetings {
   display: flex;
   text-align: start;
   padding-left: 10px;
-  margin-bottom: 5px;
 }
 
 .greetings > h3 {
-  line-height: 1.3;
+  line-height: 1.4;
   font-size: 35px;
 }
 
