@@ -8,10 +8,18 @@ import SearchContext from './context/SearchContext';
 function App() {
   const [username, setUsername] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [searchResult, setSearchResult] = useState([]);
 
   return (
     <AppContext.Provider value={ { username, setUsername } }>
-      <SearchContext.Provider value={ { searchTerm, setSearchTerm } }>
+      <SearchContext.Provider value={
+        {
+          searchTerm,
+          searchResult,
+          setSearchTerm,
+          setSearchResult,
+        } 
+      }>
         <Device />
       </SearchContext.Provider>
     </AppContext.Provider>

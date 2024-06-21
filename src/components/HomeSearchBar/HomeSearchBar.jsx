@@ -7,8 +7,8 @@ import './HomeSearchBar.css';
 import searchIcon from '../../assets/icons/search.svg'
 
 function HomeSearchBar() {
-  const searchContext = useContext(SearchContext);
   const navigate = useNavigate();
+  const searchContext = useContext(SearchContext);
 
   const [term, setTerm] = useState('');
 

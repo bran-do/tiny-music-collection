@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import SearchContext from '../../context/SearchContext';
 
-import './SearchPage.css'
-
 import BackBtn from '../../components/BackBtn/BackBtn';
 import SearchSearchBar from '../../components/SearchSearchBar/SearchSearchBar';
+
+import './SearchPage.css'
+import AlbumResultList from '../../components/AlbumResultList/AlbumResultList';
 
 function SearchPage() {
   const searchContext = useContext(SearchContext);
@@ -20,6 +21,8 @@ function SearchPage() {
         <p>Album results for</p>
         <h3>&apos;{ searchContext.searchTerm }&apos;</h3>
       </div>
+
+      <AlbumResultList />
     </div>
   )
 }
