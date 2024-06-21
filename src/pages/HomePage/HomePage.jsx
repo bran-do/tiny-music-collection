@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css'
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (route) => navigate(`/${route}`);
+
   return (
     <div className='homepage-container'>
       <div className="greetings-and-search-bar">
@@ -17,8 +22,8 @@ function HomePage() {
       </div>
 
       <nav className="buttons-menu">
-        <button>C</button>
-        <button>P</button>
+        <button onClick={ () => handleNavigation('collection') }>C</button>
+        <button onClick={ () => handleNavigation('profile') }>P</button>
       </nav>
     </div>
   )

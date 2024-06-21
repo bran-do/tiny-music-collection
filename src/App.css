@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+header {
+  font-size: 25px;
+  padding: 10px 0;
+}
+
 form:has(> input) {
   display: flex;
   justify-content: space-between;
