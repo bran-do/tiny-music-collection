@@ -1,4 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+
+import AppContext from '../../context/AppContext';
 import HomeSearchBar from '../../components/HomeSearchBar/HomeSearchBar';
 
 import './HomePage.css'
@@ -7,6 +10,8 @@ import profileIcon from '../../assets/icons/user.svg'
 import collectionIcon from '../../assets/icons/disc.svg'
 
 function HomePage() {
+  const appContext = useContext(AppContext);
+
   const navigate = useNavigate();
   const handleNavigation = (route) => navigate(`/${route}`);
 
@@ -14,7 +19,7 @@ function HomePage() {
     <div className='homepage-container'>
       <div className="greetings-and-search-bar">
         <div className="greetings">
-          <h3>Hello,<br />user.</h3>
+          <h3>Hello,<br />{ appContext.username }.</h3>
         </div>
 
         <HomeSearchBar />

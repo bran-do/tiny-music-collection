@@ -1,15 +1,20 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AppContext from '../../context/AppContext';
+
 import './LoginPage.css'
 
-import { useNavigate } from 'react-router-dom';
-
 function LoginPage() {
+  const appContext = useContext(AppContext);
+
+  const [name, setName] = useState('');
+  
   const navigate = useNavigate();
-
-  const [username, setUsername] = useState('');
-
-  const handleChange = (event) => { setUsername(event.target.value) };
-  const handleSubmit = () => { navigate('/home') };
+  const handleChange = (event) => { setName(event.target.value) };
+  const handleSubmit = () => {
+    appContext.setUsername(name);
+    navigate('/home') 
+  };
 
   return (
     <div className="login-container">
@@ -19,7 +24,7 @@ function LoginPage() {
             placeholder="Name"
             type="text"
             name="username"
-            value={ username }
+            value={ name }
             onChange={ handleChange }
           />
           <button>{'>'}</button>

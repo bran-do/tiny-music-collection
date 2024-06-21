@@ -1,16 +1,21 @@
-import { useState } from 'react';
-import searchIcon from '../../assets/icons/search.svg'
+import { useState, useContext } from 'react';
+import AppContext from '../../context/AppContext';
 
 import './SearchSearchBar.css';
 
-function SearchSearchBar() {
-  const [searchTerm, setSearchTerm] = useState('');
+import searchIcon from '../../assets/icons/search.svg'
 
-  const handleChange = (event) => { setSearchTerm(event.target.value) };
+function SearchSearchBar() {
+  const appContext = useContext(AppContext);
+
+  const [term, setTerm] = useState('');
+
+  const handleChange = (event) => { setTerm(event.target.value) };
+  const handleSubmit = () => { appContext.setSearchTerm(term) };
 
   return (
     <div className="search-search-bar">
-      <form>
+      <form onSubmit={ handleSubmit }>
         <button>
           <img src={ searchIcon } alt="Search" width="14" />
         </button>
@@ -19,7 +24,7 @@ function SearchSearchBar() {
           placeholder='What else?'
           name="search-term"
           type="text"
-          value={ searchTerm }
+          value={ term }
           onChange={ handleChange }
         />
       </form>

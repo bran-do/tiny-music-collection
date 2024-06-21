@@ -1,19 +1,26 @@
-import { useState } from 'react';
-import searchIcon from '../../assets/icons/search.svg'
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AppContext from '../../context/AppContext';
 
 import './HomeSearchBar.css';
-import { useNavigate } from 'react-router-dom';
+
+import searchIcon from '../../assets/icons/search.svg'
 
 function HomeSearchBar() {
+  const appContext = useContext(AppContext);
   const navigate = useNavigate();
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [term, setTerm] = useState('');
 
-  const handleChange = (event) => { setSearchTerm(event.target.value) };
+  const handleChange = (event) => { setTerm(event.target.value) };
+  const handleSubmit = () => {
+    appContext.setSearchTerm(term);
+    navigate('/search');
+  }
 
   return (
     <div className="search-bar">
-      <form onSubmit={ () => navigate('/search') }>
+      <form onSubmit={ handleSubmit }>
         <button>
           <img src={ searchIcon } alt="Search" width="14" />
         </button>
@@ -22,7 +29,7 @@ function HomeSearchBar() {
           placeholder='Add some music to your collection'
           name="search-term"
           type="text"
-          value={ searchTerm }
+          value={ term }
           onChange={ handleChange }
         />
       </form>
