@@ -6,7 +6,12 @@
 }
 
 h3 {
+  display: flex;
+  font-family: pixel-op-bold;
+  font-size: 25px;
   margin: 0;
+  padding-left: 2px;
+  justify-self: flex-start;
 }
 
 .input-and-btn {
@@ -19,6 +24,8 @@ input:focus {
 }
 
 input {
+  font-family: pixel-op-bold;
+  font-size: larger;
   color: black;
   height: 25px;
   border: none;
@@ -26,6 +33,8 @@ input {
 }
 
 input::placeholder {
+  font-family: pixel-op;
+  font-size: larger;
   color: black;
 }
 
