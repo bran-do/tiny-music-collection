@@ -35,8 +35,8 @@ input {
 }
 
 input::placeholder {
+  font-size: 15px;
   font-family: pixel-op;
-  font-size: 30px;
   color: black;
 }
 

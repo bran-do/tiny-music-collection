@@ -1,15 +1,13 @@
-import { useNavigate } from 'react-router-dom';
+import BackBtn from '../../components/BackBtn/BackBtn';
 
 import './SearchPage.css'
 import searchIcon from '../../assets/icons/search.svg'
 
 function SearchPage() {
-  const navigate = useNavigate();
-
   return (
     <div className="search-container">
       <div className="search-header">
-        <button onClick={ () => navigate(-1) }>{ '<' }</button>
+        <BackBtn />
         <div className="search-bar">
           <form>
             <button>
@@ -22,7 +20,7 @@ function SearchPage() {
 
       <div className="search-results-text">
         <p>Album results for</p>
-        <h3>'botando lenha na fogueira errada'</h3>
+        <h3>&apos;botando lenha na fogueira errada&apos;</h3>
       </div>
     </div>
   )

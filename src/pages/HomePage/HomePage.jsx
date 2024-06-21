@@ -22,7 +22,7 @@ function HomePage() {
             <button>
               <img src={ searchIcon } alt="Search" width="14" />
             </button>
-            <input type="text" placeholder='Add some music to your collection' />
+            <input type="text" placeholder='Add some music to your collection' className="search-input" />
           </form>
         </div>
       </div>
@@ -31,6 +31,9 @@ function HomePage() {
         <button onClick={ () => handleNavigation('collection') }>
           <img src={ collectionIcon } alt="Collection" />
         </button>
+
+        <span className="icon-divider" />
+
         <button onClick={ () => handleNavigation('profile') }>
           <img src={ profileIcon } alt="Profile" />
         </button>

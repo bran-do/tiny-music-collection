@@ -1,6 +1,6 @@
 .search-header {
   display: flex;
-  align-items: center;
+  place-items: center;
   margin: 10px 0;
 }
 

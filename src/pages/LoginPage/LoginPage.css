@@ -6,10 +6,14 @@
   padding: 0 10px 1rem; /* 1rem = top bar height */
 }
 
-h3 {
+.login-container > h3 {
   font-size: 25px;
   margin: 5px 0;
   padding-left: 2px;
+}
+
+.input-and-btn > input::placeholder {
+  padding-left: .2rem;
 }
 
 .input-and-btn > button {

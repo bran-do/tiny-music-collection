@@ -15,25 +15,40 @@
 }
 
 .greetings {
-  display: flex;
   text-align: start;
   padding-left: 10px;
 }
 
 .greetings > h3 {
-  line-height: 1.2;
+  line-height: 1;
   font-size: 35px;
+  margin: 1rem 0;
 }
 
-form > input {
+.search-input {
   padding: 5px 1px;
 }
 
-form > input::placeholder {
+.search-input::placeholder {
   font-size: 13.5px;
+  padding-left: 2px;
 }
 
 .buttons-menu {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.buttons-menu button {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.buttons-menu > .icon-divider {
+  height: 10px;
+  width: 1.5px;
+  border-radius: 35%;
+  background-color: black;
 }
