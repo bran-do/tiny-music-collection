@@ -14,7 +14,7 @@ function HomePage() {
         </div>
 
         <div className="search-bar">
-          <form>
+          <form onSubmit={ () => handleNavigation('search') }>
             <button>S</button>
             <input type="text" placeholder='Add some music to your collection' />
           </form>
