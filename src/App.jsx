@@ -1,10 +1,9 @@
 import './App.css'
+import Device from './canvas/Device/Device'
 
 function App() {
   return (
-    <h1>
-      Tiny Music Collection
-    </h1>
+    <Device />
   )
 }
 
