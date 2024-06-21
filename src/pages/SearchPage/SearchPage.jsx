@@ -1,21 +1,14 @@
 import BackBtn from '../../components/BackBtn/BackBtn';
+import SearchSearchBar from '../../components/SearchSearchBar/SearchSearchBar';
 
 import './SearchPage.css'
-import searchIcon from '../../assets/icons/search.svg'
 
 function SearchPage() {
   return (
     <div className="search-container">
       <div className="search-header">
         <BackBtn />
-        <div className="search-bar">
-          <form>
-            <button>
-              <img src={ searchIcon } alt="Search" width="14" />
-            </button>
-            <input type="text" placeholder="What else?" />
-          </form>
-        </div>
+        <SearchSearchBar />
       </div>
 
       <div className="search-results-text">

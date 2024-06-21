@@ -4,12 +4,6 @@
   margin: 10px 0;
 }
 
-.search-header > .search-bar {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-}
-
 .search-header > button {
   position: absolute;
 }
