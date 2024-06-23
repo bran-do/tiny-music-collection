@@ -11,6 +11,12 @@
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .device-container {
+    scale: 110%;
+  }
+}
+
 header {
   font-size: 21px;
   padding: 10px 0;
