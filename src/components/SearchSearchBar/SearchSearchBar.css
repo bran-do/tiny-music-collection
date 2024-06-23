@@ -1,5 +1,8 @@
 .search-search-bar {
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
+  width: 100%;
+}
+
+.search-search-bar form {
+  width: 100%;
 }

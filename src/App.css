@@ -24,6 +24,7 @@ form:has(> input) {
 }
 
 input {
+  display: flex;
   flex-grow: 1;
   padding-left: 5px;
   font-family: pixel-op-bold;

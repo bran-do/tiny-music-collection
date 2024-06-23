@@ -2,10 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
-  justify-content: space-evenly;
+  padding: 0 .5rem;
+  justify-content: space-between;
   margin-top: 1.25rem;
 }
+
 
 .search-result-list a {
   text-decoration: none;
@@ -20,7 +21,6 @@
   height: 220px;
   align-items: start;
   line-height: 1;
-  margin: .35rem 0;
 }
 
 .album > img {
@@ -42,7 +42,7 @@
 
 .album-artist {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -5,12 +5,7 @@
 
 .search-header {
   display: flex;
-  place-items: center;
   margin: 10px 0;
-}
-
-.search-header > button {
-  position: absolute;
 }
 
 .search-results-text {
