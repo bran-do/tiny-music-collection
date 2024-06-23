@@ -2,6 +2,13 @@
   display: flex;
   margin: auto;
   text-align: center;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1530px) {
+  .lottie-background {
+    display: none;
+  }
 }
 
 header {
