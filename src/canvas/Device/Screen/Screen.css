@@ -1,5 +1,6 @@
 .screen {
   display: flex;
+  position: absolute;
   overflow: hidden;
   flex-direction: column;
   height: 32rem;

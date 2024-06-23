@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Device from './canvas/Device/Device'
 import AppContext from './context/AppContext';
 import SearchContext from './context/SearchContext';
-
+import Background from './canvas/Background/Background';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -20,7 +19,7 @@ function App() {
           setSearchResult,
         } 
       }>
-        <Device />
+        <Background />
       </SearchContext.Provider>
     </AppContext.Provider>
   )

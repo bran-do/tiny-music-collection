@@ -16,8 +16,6 @@ function AlbumResultList() {
       setAlbumSearchResult(foundAlbums);
     };
 
-    console.log(albumSearchResult)
-
     fetchAlbums();
   }, [searchTerm])
 
