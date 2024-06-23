@@ -16,6 +16,8 @@ function AlbumResultList() {
       setAlbumSearchResult(foundAlbums);
     };
 
+    console.log(albumSearchResult)
+
     fetchAlbums();
   }, [searchTerm])
 
@@ -24,17 +26,22 @@ function AlbumResultList() {
       collectionId,
       artworkUrl100,
       collectionName,
+      artistName,
+      releaseDate,
     } = album;
 
     return (
       <Link
         to={ `/album/${collectionId}` }
         key={ collectionId }
-        className="album"
       >
-        <li key={ collectionId }>
+        <li className="album" key={ collectionId }>
               <img src={ artworkUrl100 } alt={ collectionName } />
-              <p>{ collectionName }</p>
+              <div className="album-info">
+                <span className="album-name">{ collectionName }</span>
+                <span className="album-artist">{ artistName }</span>
+                <span className="album-year">{ parseInt(releaseDate) }</span>
+              </div>
         </li>
       </Link>
     )
