@@ -1,6 +1,7 @@
 import { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import SearchContext from "../../context/SearchContext";
+
 import searchAlbumsAPI from "../../services/searchAlbumsAPI";
 
 import './AlbumResultList.css'
@@ -14,6 +15,7 @@ function AlbumResultList() {
     const fetchAlbums = async () => {
       const foundAlbums = await searchAlbumsAPI(searchTerm);
       setAlbumSearchResult(foundAlbums);
+      console.log(foundAlbums[0])
     };
 
     fetchAlbums();

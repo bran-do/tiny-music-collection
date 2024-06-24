@@ -10,14 +10,14 @@ function App() {
   const [searchResult, setSearchResult] = useState([]);
 
   return (
-    <AppContext.Provider value={ { username, setUsername } }>
+    <AppContext.Provider value={{ username, setUsername }}>
       <SearchContext.Provider value={
         {
           searchTerm,
           searchResult,
           setSearchTerm,
           setSearchResult,
-        } 
+        }
       }>
         <Background />
       </SearchContext.Provider>
