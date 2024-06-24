@@ -1,18 +1,18 @@
 import { Player } from '@lottiefiles/react-lottie-player';
-import animation from './animation/Animacao_fundoIpod (1).json'
+import animationData from '../../assets/animation/fumaça.json'
+
 
 import Device from '../Device/Device';
 import './Background.css'
 
 function Background() {
-
   return (
-    <>
-    <div className='lottie-background'>
+    <div className='background'>
+      <div className='lottie-background'>
       <Player
         autoplay
         loop
-        src={animation}
+        src={animationData}
         className='lottie-animation'
         style={{ position: 'fixed', margin: '0', width: '100%', objectFit: 'cover', minWidth: '1512px', minHeight: '982px' }}
       >
@@ -21,7 +21,7 @@ function Background() {
     <div className="device-container">
       <Device />
     </div>
-    </>
+    </div>
   )
 }
 
