@@ -1,15 +1,10 @@
-import BackBtn from '../../components/BackBtn/BackBtn';
+import PageHeader from '../../components/PageHeader/PageHeader';
 
 import './ProfilePage.css'
 
 function ProfilePage() {
   return (
-    <div className="profile-container">
-      <div className="profile-header">
-        <BackBtn />
-        <header>Profile</header>
-      </div>
-    </div>
+    <PageHeader pageTitle={ "Profile" } />
   )
 }
 

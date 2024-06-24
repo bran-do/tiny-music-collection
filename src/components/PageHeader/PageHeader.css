@@ -1,14 +1,14 @@
-.page-header {
+.collection-header {
   display: flex;
   align-items: center;
 }
 
-.page-header > header {
+.collection-header > header {
   display: flex;
   flex-grow: 1;
   justify-content: center;
 }
 
-.page-header > button {
+.collection-header > button {
   position: absolute;
 }

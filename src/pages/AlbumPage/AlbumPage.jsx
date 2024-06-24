@@ -1,8 +1,12 @@
 import Album from "../../components/Album/Album";
+import BackBtn from "../../components/BackBtn/BackBtn";
 
 function AlbumPage() {
   return (
-    <Album />
+    <>
+      <BackBtn />
+      <Album />
+    </>
   )
 }
 
