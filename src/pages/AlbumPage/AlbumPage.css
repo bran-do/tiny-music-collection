@@ -1,0 +1,10 @@
+.album-album-container {
+  display: flex;
+  justify-content: center;
+}
+
+.album-album-container .back-btn {
+  position: absolute;
+  left: 0;
+  margin: 10px;
+}

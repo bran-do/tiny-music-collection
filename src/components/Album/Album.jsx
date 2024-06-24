@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import getTracklist from "../../services/getTracklistAPI";
 import TrackCard from "../../components/TrackCard/TrackCard";
 
+import './Album.css'
 
 function Album() {
   const location = useLocation();
@@ -23,7 +24,7 @@ function Album() {
   const displayTracklist = (tracklist) => {
     const tracklistWOHeader = tracklist.slice(1);
     return (
-      <ul>
+      <ol>
         {
           tracklistWOHeader.map(({ trackId, trackName, previewUrl }) => (
             <li key={ trackId }>
@@ -36,27 +37,39 @@ function Album() {
             </li>
           ))
         }
-      </ul>
+      </ol>
     );
   } 
 
-  const displayAlbum = (album) => {
+  const displayAlbumPage = (album) => {
+    const {
+      collectionName,
+      artworkUrl100,
+      artistName,
+      releaseDate,
+    } = album[0];
     return (
-      <>
-        <div className="album-title">
-          <img src={ album[0].artworkUrl100 } alt="" />
-          <h1>{ album[0].collectionName }</h1>
-          <h3>{ album[0].artistName }</h3>
+      <div className="album-container">
+        <img
+          className="album-cover"
+          src={ artworkUrl100 }
+          alt={ collectionName }
+        />
+        <div className="album-header">
+          <h1>{ collectionName }</h1>
+          <h3>{ artistName }</h3>
+          <p>{ parseInt(releaseDate) }</p>
         </div>
         {displayTracklist(album)}
-        {console.log(albumData)}
-      </>
+      </div>
     )
   }
   
   return loading
     ? <p>Loading...</p>
-    : displayAlbum(albumData)
+    : (
+      displayAlbumPage(albumData)
+    )
 }
 
 export default Album;
