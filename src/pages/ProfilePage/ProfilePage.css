@@ -15,14 +15,31 @@
 
 .profile-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 0 15px;
+  align-items: center;
 }
 
 .profile-icon-and-username {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
-.profile-icon-and-username > h2 {
+.profile-icon-and-username > h3 {
   margin: 0;
+  font-size: 23px;
+}
+
+.profile-button-menu {
+  margin-top: 1rem;
+}
+
+.profile-logout-button {
+  font-family: pixel-op;
+  font-size: 18px;
+  color: #e28fdb;
+  height: 2rem;
+  width: 13rem;
+  background-color: black;
 }

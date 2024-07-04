@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 const AppContext = createContext({
-  username: 'user', // Default username is 'user'
+  username: '',
   setUsername: () => undefined,
 });
 

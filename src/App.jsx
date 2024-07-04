@@ -5,7 +5,7 @@ import SearchContext from './context/SearchContext';
 import Background from './canvas/Background/Background';
 
 function App() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('user'); // Default username is 'user'
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState([]);
 
