@@ -24,7 +24,7 @@ function Album() {
   const displayTracklist = (tracklist) => {
     const tracklistWOHeader = tracklist.slice(1);
     return (
-      <ol>
+      <ol className='album-tracklist'>
         {
           tracklistWOHeader.map(({ trackId, trackName, previewUrl }) => (
             <li key={ trackId }>
@@ -50,15 +50,18 @@ function Album() {
     } = album[0];
     return (
       <div className="album-container">
-        <img
-          className="album-cover"
-          src={ artworkUrl100 }
-          alt={ collectionName }
-        />
-        <div className="album-header">
-          <h1>{ collectionName }</h1>
-          <h3>{ artistName }</h3>
-          <p>{ parseInt(releaseDate) }</p>
+        <div className="album-cover-and-header">
+          <img
+            className="album-cover"
+            src={ artworkUrl100 }
+            alt={ collectionName }
+            width="200px"
+          />
+          <div className="album-header">
+            <h1>{ collectionName }</h1>
+            <h3>{ artistName }</h3>
+            <p>{ parseInt(releaseDate) }</p>
+          </div>
         </div>
         {displayTracklist(album)}
       </div>
