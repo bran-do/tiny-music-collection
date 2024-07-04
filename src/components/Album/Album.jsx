@@ -11,8 +11,7 @@ import './Album.css'
 
 function Album() {
   const location = useLocation();
-  const appContext = useContext(AppContext);
-
+  const { collection, setCollection } = useContext(AppContext);
 
   const [loading, setLoading] = useState(true);
   const [albumData, setAlbumData] = useState(null);
@@ -29,9 +28,21 @@ function Album() {
   }, [location.pathname]);
 
   const handleAddToCollection = () => {
-    const { collection, setCollection } = appContext;
-    const albumId = albumData[0].collectionId;
-    setCollection([...collection, albumId]);
+    const {
+      collectionId,
+      artworkUrl100,
+      collectionName,
+      artistName,
+      releaseDate
+    } = albumData[0]
+
+    setCollection([...collection, {
+      collectionId,
+      artworkUrl100,
+      collectionName,
+      artistName,
+      releaseDate,
+    }]);
   }
 
   const displayTracklist = (tracklist) => {

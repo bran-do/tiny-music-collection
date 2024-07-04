@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function albumFormatter(album) {
+function albumFormatter(album, includeReleaseDate=true) {
   const {
     collectionId,
     artworkUrl100,
@@ -19,7 +19,10 @@ function albumFormatter(album) {
             <div className="album-info">
               <span className="album-name">{ collectionName }</span>
               <span className="album-artist">{ artistName }</span>
-              <span className="album-year">{ parseInt(releaseDate) }</span>
+              {
+                includeReleaseDate
+                && <span className="album-year">{ parseInt(releaseDate) }</span>
+              }
             </div>
       </li>
     </Link>

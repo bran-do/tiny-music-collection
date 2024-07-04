@@ -1,0 +1,16 @@
+.collection-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 .5rem;
+  justify-content: space-between;
+  margin-top: .5rem;
+}
+
+.collection-list li {
+  height: 210px;
+}
+
+.collection-list a {
+  text-decoration: none;
+}
