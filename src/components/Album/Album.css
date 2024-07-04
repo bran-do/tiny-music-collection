@@ -25,17 +25,21 @@
 
 .album-header {
   display: flex;
+}
+
+.album-header-info {
+  display: flex;
   flex-direction: column;
   margin-top: 1rem;
 }
 
-.album-header > h1 {
+.album-header-info > h1 {
   font-size: 26px;
   line-height: .8;
   font-family: pixel-op-bold;
 }
 
-.album-header > h3 {
+.album-header-info > h3 {
   margin-top: .2rem;
   font-size: 18px;
 }

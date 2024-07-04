@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+
 import getTracklist from "../../services/getTracklistAPI";
 import TrackCard from "../../components/TrackCard/TrackCard";
+
+import addButton from '../../assets/icons/plus-circle.svg'
 
 import './Album.css'
 
@@ -58,9 +61,14 @@ function Album() {
             width="200px"
           />
           <div className="album-header">
-            <h1>{ collectionName }</h1>
-            <h3>{ artistName }</h3>
-            <p>{ parseInt(releaseDate) }</p>
+            <div className="album-header-info">
+              <h1>{ collectionName }</h1>
+              <h3>{ artistName }</h3>
+              <p>{ parseInt(releaseDate) }</p>
+            </div>
+            <button className="album-add-button">
+              <img src={ addButton } alt="Add album to collection" width="25px"/>
+            </button>
           </div>
         </div>
         {displayTracklist(album)}
