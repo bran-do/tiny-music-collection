@@ -27,20 +27,23 @@ function Album() {
   const displayTracklist = (tracklist) => {
     const tracklistWOHeader = tracklist.slice(1);
     return (
-      <ol className='album-tracklist'>
-        {
-          tracklistWOHeader.map(({ trackId, trackName, previewUrl }) => (
-            <li key={ trackId }>
-              <TrackCard
-                key={ trackId }
-                previewUrl={ previewUrl }
-                trackName={ trackName }
-                trackId={ trackId }
-              /> 
-            </li>
-          ))
-        }
-      </ol>
+      <>
+        <hr width="20px" />
+        <ol className='album-tracklist'>
+          {
+            tracklistWOHeader.map(({ trackId, trackName, previewUrl }) => (
+              <li key={ trackId }>
+                <TrackCard
+                  key={ trackId }
+                  previewUrl={ previewUrl }
+                  trackName={ trackName }
+                  trackId={ trackId }
+                /> 
+              </li>
+            ))
+          }
+        </ol>
+      </>
     );
   } 
 
