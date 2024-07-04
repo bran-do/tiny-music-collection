@@ -12,3 +12,17 @@
 .profile-header > button {
   position: absolute;
 }
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-icon-and-username {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-icon-and-username > h2 {
+  margin: 0;
+}
