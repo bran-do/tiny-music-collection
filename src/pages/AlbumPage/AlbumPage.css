@@ -1,6 +1,6 @@
 .album-album-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .album-album-container .back-btn {
