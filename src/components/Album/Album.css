@@ -4,6 +4,7 @@
   background-color: black;
   color: #e28fdb;
   text-align: start;
+  min-height: 119%; /* Fill the height with the black background */
 }
 
 .album-cover-and-header {
@@ -65,6 +66,7 @@
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
   padding-right: 1rem;
+  padding-bottom: .5rem;
 }
 
 .album-container hr {
