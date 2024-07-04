@@ -66,9 +66,11 @@ function Album() {
               <h3>{ artistName }</h3>
               <p>{ parseInt(releaseDate) }</p>
             </div>
-            <button className="album-add-button">
-              <img src={ addButton } alt="Add album to collection" width="25px"/>
-            </button>
+            <div className="album-add-button">
+              <button>
+                <img src={ addButton } alt="Add album to collection" width="25px"/>
+              </button>
+            </div>
           </div>
         </div>
         {displayTracklist(album)}

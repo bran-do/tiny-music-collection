@@ -25,16 +25,18 @@
 
 .album-header {
   display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
 }
 
 .album-header-info {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 }
 
 .album-header-info > h1 {
   font-size: 26px;
+  padding-right: 1rem;
   line-height: .8;
   font-family: pixel-op-bold;
 }
@@ -44,14 +46,23 @@
   font-size: 18px;
 }
 
+.album-add-button {
+  display: flex;
+  align-items: center;
+}
+
+.album-add-button button {
+  padding: 0;
+}
+
 .album-tracklist {
   display: flex;
   flex-direction: column;
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
   padding-right: 1rem;
+  padding-top: .3rem;
 }
-
 
 
 /*
