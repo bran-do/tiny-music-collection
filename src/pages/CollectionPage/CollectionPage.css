@@ -12,3 +12,18 @@
 .page-header > button {
   position: absolute;
 }
+
+.collection-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5rem;
+  min-height: 75%;
+}
+
+.collection-empty h3 {
+  margin: 1rem 0 0;
+  line-height: 1.4;
+}
