@@ -1,4 +1,4 @@
-function TrackCard({ previewUrl, trackName }) {
+function TrackCard({ trackName }) {
   return (
     <>
       <b>{trackName}</b>

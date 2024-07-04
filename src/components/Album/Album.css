@@ -9,6 +9,7 @@
 .album-cover-and-header {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   background-color: #e28fdb;
   color: black;
   padding: 1rem;
@@ -25,8 +26,9 @@
 
 .album-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .album-header-info {
