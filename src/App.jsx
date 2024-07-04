@@ -6,11 +6,19 @@ import Background from './canvas/Background/Background';
 
 function App() {
   const [username, setUsername] = useState('user'); // Default username is 'user'
+  const [collection, setCollection] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState([]);
 
   return (
-    <AppContext.Provider value={{ username, setUsername }}>
+    <AppContext.Provider value={
+      { 
+        username,
+        collection,
+        setUsername,
+        setCollection,
+      }
+    }>
       <SearchContext.Provider value={
         {
           searchTerm,

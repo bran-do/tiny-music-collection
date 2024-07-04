@@ -1,8 +1,8 @@
 import { useEffect, useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import SearchContext from "../../context/SearchContext";
 
 import searchAlbumsAPI from "../../services/searchAlbumsAPI";
+import albumFormatter from "../../utils/albumFormatter";
 
 import './AlbumResultList.css'
 
@@ -15,37 +15,10 @@ function AlbumResultList() {
     const fetchAlbums = async () => {
       const foundAlbums = await searchAlbumsAPI(searchTerm);
       setAlbumSearchResult(foundAlbums);
-      console.log(foundAlbums[0])
     };
 
     fetchAlbums();
   }, [searchTerm])
-
-  const albumFormatter = (album) => {
-    const {
-      collectionId,
-      artworkUrl100,
-      collectionName,
-      artistName,
-      releaseDate,
-    } = album;
-
-    return (
-      <Link
-        to={ `/album/${collectionId}` }
-        key={ collectionId }
-      >
-        <li className="album" key={ collectionId }>
-              <img src={ artworkUrl100 } alt={ collectionName } />
-              <div className="album-info">
-                <span className="album-name">{ collectionName }</span>
-                <span className="album-artist">{ artistName }</span>
-                <span className="album-year">{ parseInt(releaseDate) }</span>
-              </div>
-        </li>
-      </Link>
-    )
-  }
 
   return (
     <div className="search-result-container">

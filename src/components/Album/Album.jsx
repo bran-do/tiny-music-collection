@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useLocation } from "react-router-dom";
 
+import AppContext from "../../context/AppContext";
 import getTracklist from "../../services/getTracklistAPI";
 import TrackCard from "../../components/TrackCard/TrackCard";
 
@@ -10,6 +11,9 @@ import './Album.css'
 
 function Album() {
   const location = useLocation();
+  const appContext = useContext(AppContext);
+
+
   const [loading, setLoading] = useState(true);
   const [albumData, setAlbumData] = useState(null);
 
@@ -23,6 +27,12 @@ function Album() {
 
     fetchAlbum();
   }, [location.pathname]);
+
+  const handleAddToCollection = () => {
+    const { collection, setCollection } = appContext;
+    const albumId = albumData[0].collectionId;
+    setCollection([...collection, albumId]);
+  }
 
   const displayTracklist = (tracklist) => {
     const tracklistWOHeader = tracklist.slice(1);
@@ -70,7 +80,7 @@ function Album() {
               <p>{ parseInt(releaseDate) }</p>
             </div>
             <div className="album-add-button">
-              <button>
+              <button onClick={ handleAddToCollection }>
                 <img src={ addButton } alt="Add album to collection" width="25px"/>
               </button>
             </div>
