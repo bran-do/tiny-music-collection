@@ -18,7 +18,7 @@ function CollectionPage() {
         ? <CollectionList />
         : <div className='collection-empty'>
             <img src={ discIcon } alt="" width="50px"/>
-            <h3>Add albums to your collection :)</h3>
+            <h3>Search and add albums to your collection :)</h3>
         </div>
       }
     </>
