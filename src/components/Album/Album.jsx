@@ -6,6 +6,7 @@ import getTracklist from "../../services/getTracklistAPI";
 import TrackCard from "../../components/TrackCard/TrackCard";
 
 import addButton from '../../assets/icons/plus-circle.svg'
+import okButton from '../../assets/icons/check-circle.svg'
 
 import './Album.css'
 
@@ -15,6 +16,7 @@ function Album() {
 
   const [loading, setLoading] = useState(true);
   const [albumData, setAlbumData] = useState(null);
+  const [inCollection, setInCollection] = useState(false);
 
   useEffect(() => {
     async function fetchAlbum() {
@@ -22,11 +24,19 @@ function Album() {
       const data = await getTracklist(albumId);
       setAlbumData(data);
       setLoading(false);
-      console.log(albumData)
     }
-
+    
     fetchAlbum();
   }, [location.pathname]);
+
+  useEffect(() => {
+    const albumId = location.pathname.slice(7);
+    collection.forEach(({ collectionId }) => {
+      if (albumId == collectionId) {
+        setInCollection(true);
+      }
+    })
+  }, [location.pathname, collection])
 
   const handleAddToCollection = () => {
     const {
@@ -44,10 +54,19 @@ function Album() {
       artistName,
       releaseDate,
     }]);
+  };
+
+  const handleDeleteFromCollection = () => {
+    setCollection(
+      collection.filter(
+        ({ collectionId }) => collectionId !== albumData[0].collectionId
+      )
+    );
+    setInCollection(false);
   }
 
   const displayTracklist = (album) => {
-    const [_header, ...tracklist] = album.slice(1);
+    const [, ...tracklist] = album;
     return (
       <>
         <hr width="20px" />
@@ -93,9 +112,20 @@ function Album() {
               <p>{ parseInt(releaseDate) }</p>
             </div>
             <div className="album-add-button">
-              <button onClick={ handleAddToCollection }>
-                <img src={ addButton } alt="Add album to collection" width="25px"/>
-              </button>
+              {
+                inCollection
+                  ? (
+                  <button onClick={ handleDeleteFromCollection }>
+                    <img src={ okButton } alt="Album in collection. Click to delete it" width="25px"/>
+                  </button>
+                  )
+
+                  : (
+                    <button onClick={ handleAddToCollection }>
+                      <img src={ addButton } alt="Add album to collection" width="25px"/>
+                    </button>
+                  )
+              }
             </div>
           </div>
         </div>
