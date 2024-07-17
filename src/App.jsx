@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+
 import AppContext from './context/AppContext';
 import SearchContext from './context/SearchContext';
 import Background from './canvas/Background/Background';
 
+import './App.css'
+
 function App() {
   const [username, setUsername] = useState(() => {
     const storedUsername = localStorage.getItem('username'); 
-    return storedUsername ? storedUsername : 'user'; // Value starts as localStorage's username; otherwise, 'user'
+    return storedUsername ? storedUsername : ''; // Value starts as localStorage's username; otherwise, 'user'
   });
 
   const [collection, setCollection] = useState(() => {

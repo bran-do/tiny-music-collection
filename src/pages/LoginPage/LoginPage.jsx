@@ -1,19 +1,22 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../../context/AppContext';
 
 import './LoginPage.css'
 
 function LoginPage() {
-  const appContext = useContext(AppContext);
-
+  const { username, setUsername } = useContext(AppContext);
+  const navigate = useNavigate();
+  
   const [name, setName] = useState('');
   
-  const navigate = useNavigate();
+  // If username's already set, redirects to homepage:
+  useEffect(() => { username && navigate('/home') }, [username, navigate]);
+
   const handleChange = (event) => { setName(event.target.value) };
   const handleSubmit = () => {
-    appContext.setUsername(name);
-    navigate('/home') 
+    setUsername(name);
+    navigate('/home');
   };
 
   return (
