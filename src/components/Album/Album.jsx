@@ -22,6 +22,7 @@ function Album() {
       const data = await getTracklist(albumId);
       setAlbumData(data);
       setLoading(false);
+      console.log(albumData)
     }
 
     fetchAlbum();
@@ -45,14 +46,14 @@ function Album() {
     }]);
   }
 
-  const displayTracklist = (tracklist) => {
-    const tracklistWOHeader = tracklist.slice(1);
+  const displayTracklist = (album) => {
+    const [_header, ...tracklist] = album.slice(1);
     return (
       <>
         <hr width="20px" />
         <ol className='album-tracklist'>
           {
-            tracklistWOHeader.map(({ trackId, trackName, previewUrl }) => (
+            tracklist.map(({ trackId, trackName, previewUrl }) => (
               <li key={ trackId }>
                 <TrackCard
                   key={ trackId }
@@ -74,6 +75,7 @@ function Album() {
       artworkUrl100,
       artistName,
       releaseDate,
+      copyright
     } = album[0];
     return (
       <div className="album-container">
@@ -98,6 +100,7 @@ function Album() {
           </div>
         </div>
         {displayTracklist(album)}
+        <footer>{ copyright }</footer>
       </div>
     )
   }
