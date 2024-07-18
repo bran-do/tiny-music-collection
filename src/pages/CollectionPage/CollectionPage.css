@@ -25,5 +25,6 @@
 
 .collection-empty h3 {
   margin: 1rem 0 0;
-  line-height: 1.4;
+  line-height: 1.3;
+  width: 20vh;
 }
