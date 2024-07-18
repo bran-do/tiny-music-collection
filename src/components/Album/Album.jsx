@@ -116,13 +116,13 @@ function Album() {
                 inCollection
                   ? (
                   <button onClick={ handleDeleteFromCollection }>
-                    <img src={ okButton } alt="Album in collection. Click to delete it" width="25px"/>
+                    <img src={ okButton } alt="Album in collection. Click to delete it" width="30px"/>
                   </button>
                   )
 
                   : (
                     <button onClick={ handleAddToCollection }>
-                      <img src={ addButton } alt="Add album to collection" width="25px"/>
+                      <img src={ addButton } alt="Add album to collection" width="30px"/>
                     </button>
                   )
               }

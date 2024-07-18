@@ -2,7 +2,7 @@
   background-image: url('../../assets/backgroundImg/backgroundImg.jpg');
   background-size: cover;
   width: 1920px;
-  height: 1080px;
+  height: 100vh;
 }
 
 .device-container {

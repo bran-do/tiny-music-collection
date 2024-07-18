@@ -14,7 +14,7 @@ function Background() {
         loop
         src={animationData}
         className='lottie-animation'
-        style={{ position: 'fixed', margin: '0', width: '100%', objectFit: 'cover', minWidth: '1512px', minHeight: '982px' }}
+        style={{ position: 'fixed', margin: '0', width: '1920px', objectFit: 'cover', opacity: '60%' }}
       >
       </Player>
     </div>

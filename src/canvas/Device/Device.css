@@ -1,7 +1,6 @@
 .device-shape {
   display: flex;
   overflow: hidden;
-  top: 0;
   height: 35rem;
   width: 21rem;
   border: 2px solid rgb(0, 0, 0);
