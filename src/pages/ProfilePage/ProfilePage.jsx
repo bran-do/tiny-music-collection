@@ -9,12 +9,17 @@ import profileCircleIcon from '../../assets/icons/user-circle.svg'
 import './ProfilePage.css'
 
 function ProfilePage() {
-  const appContext = useContext(AppContext);
+  const {
+    username,
+    setUsername, 
+    setCollection,
+  } = useContext(AppContext);
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    appContext.setUsername('user');
+    setUsername('');
+    setCollection([]);
     navigate('/');
   }
 
@@ -24,7 +29,7 @@ function ProfilePage() {
       <div className='profile-container'>
         <div className='profile-icon-and-username'>
           <img src={ profileCircleIcon } alt="Profile icon" width="80px"/>
-          <h3>{ appContext.username }</h3>
+          <h3>{ username }</h3>
         </div>
 
         <nav className='profile-button-menu'>
